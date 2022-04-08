@@ -11,6 +11,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import { PeekABooComponent } from './peek-a-boo/peek-a-boo.component';
+import { PeekABooDirective } from './peek-a-boo.directive';
+import { PeekABooParentComponent } from './peek-a-boo-parent/peek-a-boo-parent.component';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent  }
+      { path: 'shipping', component: ShippingComponent  },
+      { path: 'peek-boo', component: PeekABooParentComponent }
     ])
   ],
   declarations: [
@@ -32,7 +36,10 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    PeekABooComponent,
+    PeekABooDirective,
+    PeekABooParentComponent
   ],
   bootstrap: [
     AppComponent
